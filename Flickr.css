@@ -1,0 +1,171 @@
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* The above part is added so that when the screen size reduces, no white space is seen. */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(neom.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Poppins, sans-serif;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: white;
+    padding: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo-text:hover {
+    cursor: pointer;
+}
+
+.searchBar {
+    margin: 1.5rem;
+    width: 30rem;
+    height: 2rem;
+    border-radius: 25px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 4px;
+}
+
+nav,
+nav ul {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.content {
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: 350px;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 25px;
+}
+
+.start-button {
+    display: block;
+    margin: 70px auto;
+    padding: 10px 20px;
+    font-size: 17px;
+    border: solid white 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media(max-width: 805px) {
+    .logo-text {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        margin: 5px 2px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .searchBar {
+        width: 10rem;
+    }
+}
+
+
+@media(max-width: 450px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav ul li {
+        margin: 5px 1px;
+    }
+
+    .searchBar {
+        width: 7rem;
+    }
+
+    .start-button {
+        font-size: 14px;
+    }
+
+    header {
+        justify-content: space-around
+    }
+}
